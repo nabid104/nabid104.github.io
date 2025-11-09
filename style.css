@@ -1,18 +1,18 @@
-/* Global styles */
+/* === Global Layout === */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Georgia', serif;
   margin: 0;
   padding: 0;
-  background-color: #fefefe;
+  background-color: #ffffff;
   color: #1a1a1a;
 }
 
-/* Header styles */
+/* === Header === */
 header {
-  background-color: #004080;
-  color: white;
+  background-color: #e0e0e0; /* Ash color */
   padding: 30px 20px;
   text-align: center;
+  color: #333;
 }
 
 nav ul {
@@ -21,7 +21,7 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 10px;
+  margin: 15px 0 0;
 }
 
 nav ul li {
@@ -29,12 +29,17 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
+  color: #333;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
-/* Section layout */
+nav ul li a:hover {
+  color: #555;
+}
+
+/* === Sections === */
 section {
   padding: 40px 20px;
   max-width: 900px;
@@ -42,51 +47,86 @@ section {
 }
 
 section h2 {
-  color: #004080;
-  border-bottom: 2px solid #004080;
-  padding-bottom: 5px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 8px;
+  color: #333;
 }
 
-/* Colorful sections */
-.colorful {
-  background-color: #f0f8ff;
-  border-left: 5px solid #ff4081;
-  margin-top: 30px;
-  padding: 30px;
+/* === Footer === */
+footer {
+  background-color: #e0e0e0;
+  color: #333;
+  text-align: center;
+  padding: 20px;
 }
 
-.colorful h2 {
-  color: #c2185b;
-}
-
-/* Contact form styling */
+/* === Contact Form === */
 form input,
 form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #aaa;
   border-radius: 4px;
 }
 
 form button {
   padding: 10px 20px;
-  background-color: #004080;
-  color: white;
+  background-color: #444;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
 form button:hover {
-  background-color: #0066cc;
+  background-color: #222;
 }
 
-/* Footer */
-footer {
-  background-color: #004080;
-  color: white;
-  text-align: center;
+/* === Literature Vibe for Poems Page === */
+.poems-page {
+  background-color: #fefcf9;
+  color: #3b2f2f;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  background-repeat: repeat;
+}
+
+.poems-page h2 {
+  color: #5a3e36;
+  border-color: #d8cfc4;
+}
+
+.poems-page article {
+  background: rgba(255, 255, 255, 0.8);
+  border-left: 5px solid #a1887f;
   padding: 20px;
-  margin-top: 40px;
+  margin: 20px 0;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  line-height: 1.8;
+}
+
+/* === Blog Styling === */
+.blog-page article {
+  background-color: #f9f9f9;
+  border-left: 4px solid #90caf9;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.blog-page h2 {
+  color: #0d47a1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
 }
